@@ -19,13 +19,13 @@
                 <div class="col-md-12  mrg-t-20">
                     <div class="col-md-1"></div>
                     <div class="col-md-4 p_l_r_n">
-                        <asp:Button runat="server" CssClass="btn btn-block btn-warning btn-lg " Enabled="false" Style="border-radius: 0px;" Text="My Information"></asp:Button>
+                        <asp:Button runat="server" CssClass="btn btn-block btn-warning btn-lg " Enabled="false" Style="border-radius: 0px;" Text="Personal Information"></asp:Button>
                     </div>
                     <div class="col-md-3 p_l_r_n">
-                        <asp:Button runat="server" CssClass="btn btn-block btn-warning btn-lg" Enabled="false" Style="border-radius: 0px;" Text="Department Information"></asp:Button>
+                        <asp:Button runat="server" CssClass="btn btn-block btn-warning btn-lg" Enabled="false" Style="border-radius: 0px;" Text="Family Information"></asp:Button>
                     </div>
                     <div class="col-md-3 p_l_r_n">
-                        <asp:Button runat="server" CssClass="btn btn-block btn-success btn-lg" Style="border-radius: 0px;" Text="Finalize Information"></asp:Button>
+                        <asp:Button runat="server" CssClass="btn btn-block btn-success btn-lg" Style="border-radius: 0px;" Text="Summary"></asp:Button>
                     </div>
                     <div class="col-md-1"></div>
                 </div>
@@ -104,7 +104,7 @@
                         </div>
                         <div class="col-md-12 mrg-t-20">
                             <div class="table-responsive">
-                                <asp:GridView ID="GVSpouseChild" runat="server" EmptyDataText="No Records Found" OnRowDataBound="GVSpouseChild_RowDataBound" AutoGenerateColumns="False" CssClass="table table-condensed table-bordered table-blue">
+                                <asp:GridView ID="GVSpouseChild" runat="server" EmptyDataText="<b>No Records Found regarding child information.</b>" OnRowDataBound="GVSpouseChild_RowDataBound" AutoGenerateColumns="False" CssClass="table table-condensed table-bordered table-blue">
                                     <Columns>
                                         <asp:TemplateField HeaderText="Sr No">
                                             <ItemTemplate>
@@ -138,7 +138,7 @@
 
                         <div class="col-md-12 mrg-t-20">
                             <div class="table-responsive">
-                                <asp:GridView ID="GVSpouseParent" runat="server" EmptyDataText="No Records Found" OnRowDataBound="GVSpouseParent_RowDataBound" AutoGenerateColumns="False" CssClass="table table-condensed table-bordered table-blue">
+                                <asp:GridView ID="GVSpouseParent" runat="server" EmptyDataText="<b> No Records Found regarding Parent Information.</b>" OnRowDataBound="GVSpouseParent_RowDataBound" AutoGenerateColumns="False" CssClass="table table-condensed table-bordered table-blue">
                                     <Columns>
                                         <asp:TemplateField HeaderText="Sr No">
                                             <ItemTemplate>
@@ -180,7 +180,7 @@
                         <br />
                         <br />
                         <br />
-                        <asp:Button runat="server" ID="btnSave" CssClass="btn btn-success btn-block" OnClientClick="SavePersonRecord();"  Text="Confirm" />
+                        <asp:Button runat="server" ID="btnSave" CssClass="btn btn-success btn-block" OnClientClick="SavePersonRecord();"  Text="Submit" />
                         <br />
                         <br />
                         <br />
@@ -193,7 +193,7 @@
      <script type="text/javascript">
 
         function SavePersonRecord() {
-            alert("Thank you");
+            alert("Thank you for visiting.");
             window.location.href = "userdetails.aspx";
         }
     </script>

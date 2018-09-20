@@ -20,13 +20,13 @@
                 <div class="col-md-12  mrg-t-20">
                     <div class="col-md-1"></div>
                     <div class="col-md-4 p_l_r_n">
-                        <asp:Button runat="server" CssClass="btn btn-block btn-warning btn-lg " Enabled="false" Style="border-radius: 0px;" Text="My Information"></asp:Button>
+                        <asp:Button runat="server" CssClass="btn btn-block btn-warning btn-lg " Enabled="false" Style="border-radius: 0px;" Text="Personal Information"></asp:Button>
                     </div>
                     <div class="col-md-3 p_l_r_n">
-                        <asp:Button runat="server" CssClass="btn btn-block btn-success btn-lg" Style="border-radius: 0px;" Text="Department Information"></asp:Button>
+                        <asp:Button runat="server" CssClass="btn btn-block btn-success btn-lg" Style="border-radius: 0px;" Text="Family Information"></asp:Button>
                     </div>
                     <div class="col-md-3 p_l_r_n">
-                        <asp:Button runat="server" CssClass="btn btn-block btn-warning btn-lg" Enabled="false" Style="border-radius: 0px;" Text="Finalize Information"></asp:Button>
+                        <asp:Button runat="server" CssClass="btn btn-block btn-warning btn-lg" Enabled="false" Style="border-radius: 0px;" Text="Summary"></asp:Button>
                     </div>
                     <div class="col-md-1"></div>
                 </div>
@@ -38,17 +38,17 @@
                         <div class="col-md-12 mrg-t-20">
 
                             <div class="col-md-4">
-                                <span class="text-danger">* </span><span class="text-info">Spouse Name</span>
-                                <asp:TextBox runat="server" ID="txtSpouseName" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Spouse Name</span>--%>
+                                <asp:TextBox runat="server" ID="txtSpouseName" CssClass="form-control" placeholder="Spouse Name"></asp:TextBox>
                             </div>
                             <div class="col-md-4">
-                                <span class="text-danger">* </span><span class="text-info">Date Of Birth</span>
-                                <asp:TextBox runat="server" ID="txtUserDOB" AutoPostBack="true" OnTextChanged="txtUserDOB_TextChanged" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Date Of Birth</span>--%>
+                                <asp:TextBox runat="server" ID="txtUserDOB" AutoPostBack="true" OnTextChanged="txtUserDOB_TextChanged" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;" CssClass="form-control" placeholder="Date of Birth"  AutoCompleteType="Disabled"></asp:TextBox>
                                 <cc1:CalendarExtender ID="CalendarExtender1_txtUserDOB" runat="server" BehaviorID="CalendarExtender_txtUserDOB" DaysModeTitleFormat="yyyy/MM/dd" Format="yyyy/MM/dd" TargetControlID="txtUserDOB" TodaysDateFormat="yyyy/MM/dd"></cc1:CalendarExtender>
                             </div>
                             <div class="col-md-4">
-                                <span class="text-danger">* </span><span class="text-info">Age</span>
-                                <asp:TextBox runat="server" ID="txtAge" Enabled="false" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Age</span>--%>
+                                <asp:TextBox runat="server" ID="txtAge" Enabled="false" CssClass="form-control" placeholder="Age"></asp:TextBox>
                             </div>
                         </div>
 
@@ -62,16 +62,16 @@
                                 <asp:CheckBox runat="server" ID="chk1" AutoPostBack="true" OnCheckedChanged="chk1_CheckedChanged" />
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Name</span>
-                                <asp:TextBox runat="server" ID="txtChildName1" Enabled="false" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Name</span>--%>
+                                <asp:TextBox runat="server" ID="txtChildName1" Enabled="false" CssClass="form-control" placeholder="Name"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Date Of Birth</span>
-                                <asp:TextBox runat="server" ID="txtDOB1" Enabled="false" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Date Of Birth</span>--%>
+                                <asp:TextBox placeholder="Date of birth" runat="server" ID="txtDOB1" Enabled="false" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
                                 <cc1:CalendarExtender ID="CalendarExtender1_txtDOB1" runat="server" BehaviorID="CalendarExtender_txtDOB1" DaysModeTitleFormat="yyyy/MM/dd" Format="yyyy/MM/dd" TargetControlID="txtDOB1" TodaysDateFormat="yyyy/MM/dd"></cc1:CalendarExtender>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Select Relation</span>
+                                <%--<span class="text-danger">* </span><span class="text-info">Select Relation</span>--%>
                                 <asp:DropDownList runat="server" ID="ddlRelation1" Enabled="false" CssClass="form-control">
                                     <asp:ListItem Value="0">Select Relation</asp:ListItem>
                                     <asp:ListItem Value="1">Son</asp:ListItem>
@@ -82,20 +82,20 @@
                         </div>
                         <div class="col-md-12 mrg-t-20">
                             <div class="col-md-3">
-                                <span>Child1 </span>
+                                <span>Child2 </span>
                                 <asp:CheckBox runat="server" ID="chk2" AutoPostBack="true" OnCheckedChanged="chk2_CheckedChanged" />
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Name</span>
-                                <asp:TextBox runat="server" ID="txtChildName2" Enabled="false" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Name</span>--%>
+                                <asp:TextBox runat="server" ID="txtChildName2" Enabled="false" CssClass="form-control" placeholder="Name"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Date Of Birth</span>
-                                <asp:TextBox runat="server" ID="txtDOB2" Enabled="false" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Date Of Birth</span>--%>
+                                <asp:TextBox placeholder="Date of birth" runat="server" ID="txtDOB2" Enabled="false" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
                                 <cc1:CalendarExtender ID="CalendarExtender1_txtDOB2" runat="server" BehaviorID="CalendarExtender_txtDOB2" DaysModeTitleFormat="yyyy/MM/dd" Format="yyyy/MM/dd" TargetControlID="txtDOB2" TodaysDateFormat="yyyy/MM/dd"></cc1:CalendarExtender>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Select Relation</span>
+                                <%--<span class="text-danger">* </span><span class="text-info">Select Relation</span>--%>
                                 <asp:DropDownList runat="server" ID="ddlRelation2" Enabled="false" CssClass="form-control">
                                     <asp:ListItem Value="0">Select Relation</asp:ListItem>
                                     <asp:ListItem Value="1">Son</asp:ListItem>
@@ -106,20 +106,20 @@
                         </div>
                         <div class="col-md-12 mrg-t-20">
                             <div class="col-md-3">
-                                <span>Child1 </span>
+                                <span>Child3 </span>
                                 <asp:CheckBox runat="server" ID="chk3" AutoPostBack="true" OnCheckedChanged="chk3_CheckedChanged" />
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Name</span>
-                                <asp:TextBox runat="server" ID="txtChildName3" Enabled="false" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Name</span>--%>
+                                <asp:TextBox runat="server" ID="txtChildName3" Enabled="false" CssClass="form-control" placeholder="Name"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Date Of Birth</span>
-                                <asp:TextBox runat="server" ID="txtDOB3" Enabled="false" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Date Of Birth</span>--%>
+                                <asp:TextBox placeholder="Date of birth" runat="server" ID="txtDOB3" Enabled="false" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
                                 <cc1:CalendarExtender ID="CalendarExtender1_txtDOB3" runat="server" BehaviorID="CalendarExtender_txtDOB3" DaysModeTitleFormat="yyyy/MM/dd" Format="yyyy/MM/dd" TargetControlID="txtDOB3" TodaysDateFormat="yyyy/MM/dd"></cc1:CalendarExtender>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Select Relation</span>
+                                <%--<span class="text-danger">* </span><span class="text-info">Select Relation</span>--%>
                                 <asp:DropDownList runat="server" ID="ddlRelation3" Enabled="false" CssClass="form-control">
                                     <asp:ListItem Value="0">Select Relation</asp:ListItem>
                                     <asp:ListItem Value="1">Son</asp:ListItem>
@@ -130,20 +130,20 @@
                         </div>
                         <div class="col-md-12 mrg-t-20">
                             <div class="col-md-3">
-                                <span>Child1 </span>
+                                <span>Child4 </span>
                                 <asp:CheckBox runat="server" ID="chk4" AutoPostBack="true" OnCheckedChanged="chk4_CheckedChanged" />
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Name</span>
-                                <asp:TextBox runat="server" ID="txtChildName4" Enabled="false" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Name</span>--%>
+                                <asp:TextBox runat="server" ID="txtChildName4" Enabled="false" CssClass="form-control" placeholder="Name"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Date Of Birth</span>
-                                <asp:TextBox runat="server" ID="txtDOB4" Enabled="false" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Date Of Birth</span>--%>
+                                <asp:TextBox placeholder="Date of birth" runat="server" ID="txtDOB4" Enabled="false" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
                                 <cc1:CalendarExtender ID="CalendarExtender1_txtDOB4" runat="server" BehaviorID="CalendarExtender_txtDOB4" DaysModeTitleFormat="yyyy/MM/dd" Format="yyyy/MM/dd" TargetControlID="txtDOB4" TodaysDateFormat="yyyy/MM/dd"></cc1:CalendarExtender>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Select Relation</span>
+                                <%--<span class="text-danger">* </span><span class="text-info">Select Relation</span>--%>
                                 <asp:DropDownList runat="server" ID="ddlRelation4" Enabled="false" CssClass="form-control">
                                     <asp:ListItem Value="0">Select Relation</asp:ListItem>
                                     <asp:ListItem Value="1">Son</asp:ListItem>
@@ -164,17 +164,17 @@
                                 <asp:CheckBox runat="server" ID="chk5" AutoPostBack="true" OnCheckedChanged="chk5_CheckedChanged" />
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Name</span>
-                                <asp:TextBox runat="server" ID="TextBox1" Enabled="false" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Name</span>--%>
+                                <asp:TextBox runat="server" ID="TextBox1" Enabled="false" CssClass="form-control" placeholder="Name of Father"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Date Of Birth</span>
-                                <asp:TextBox runat="server" ID="TextBox2" Enabled="false" AutoPostBack="true" OnTextChanged="TextBox2_TextChanged" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Date Of Birth</span>--%>
+                                <asp:TextBox placeholder="Date of birth" runat="server" ID="TextBox2" Enabled="false" AutoPostBack="true" OnTextChanged="TextBox2_TextChanged" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
                                 <cc1:CalendarExtender ID="CalendarExtender1_TextBox2" runat="server" BehaviorID="CalendarExtender_TextBox2" DaysModeTitleFormat="yyyy/MM/dd" Format="yyyy/MM/dd" TargetControlID="TextBox2" TodaysDateFormat="yyyy/MM/dd"></cc1:CalendarExtender>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Age</span>
-                                <asp:TextBox runat="server" ID="TextBox9" Enabled="false" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Age</span>--%>
+                                <asp:TextBox runat="server" ID="TextBox9" Enabled="false" CssClass="form-control" placeholder="Age"></asp:TextBox>
                             </div>
 
                         </div>
@@ -184,17 +184,17 @@
                                 <asp:CheckBox runat="server" ID="chk6" AutoPostBack="true" OnCheckedChanged="chk6_CheckedChanged" />
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Name</span>
-                                <asp:TextBox runat="server" ID="TextBox3" Enabled="false" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Name</span>--%>
+                                <asp:TextBox runat="server" ID="TextBox3" Enabled="false" CssClass="form-control" placeholder="Name of Mother"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Date Of Birth</span>
-                                <asp:TextBox runat="server" ID="TextBox4" Enabled="false" AutoPostBack="true" OnTextChanged="TextBox4_TextChanged" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Date Of Birth</span>--%>
+                                <asp:TextBox placeholder="Date of birth" runat="server" ID="TextBox4" Enabled="false" AutoPostBack="true" OnTextChanged="TextBox4_TextChanged" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
                                 <cc1:CalendarExtender ID="CalendarExtender1_TextBox4" runat="server" BehaviorID="CalendarExtender_TextBox4" DaysModeTitleFormat="yyyy/MM/dd" Format="yyyy/MM/dd" TargetControlID="TextBox4" TodaysDateFormat="yyyy/MM/dd"></cc1:CalendarExtender>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Age</span>
-                                <asp:TextBox runat="server" ID="TextBox10" Enabled="false" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Age</span>--%>
+                                <asp:TextBox runat="server" ID="TextBox10" Enabled="false" CssClass="form-control" placeholder="Age"></asp:TextBox>
                             </div>
 
                         </div>
@@ -204,17 +204,17 @@
                                 <asp:CheckBox runat="server" ID="chk7" AutoPostBack="true" OnCheckedChanged="chk7_CheckedChanged" />
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Name</span>
-                                <asp:TextBox runat="server" ID="TextBox5" Enabled="false" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Name</span>--%>
+                                <asp:TextBox runat="server" ID="TextBox5" Enabled="false" CssClass="form-control" placeholder="Name of Father-in-law"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Date Of Birth</span>
-                                <asp:TextBox runat="server" ID="TextBox6" Enabled="false" AutoPostBack="true" OnTextChanged="TextBox6_TextChanged" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Date Of Birth</span>--%>
+                                <asp:TextBox placeholder="Date of birth" runat="server" ID="TextBox6" Enabled="false" AutoPostBack="true" OnTextChanged="TextBox6_TextChanged" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
                                 <cc1:CalendarExtender ID="CalendarExtender1_TextBox6" runat="server" BehaviorID="CalendarExtender_TextBox6" DaysModeTitleFormat="yyyy/MM/dd" Format="yyyy/MM/dd" TargetControlID="TextBox6" TodaysDateFormat="yyyy/MM/dd"></cc1:CalendarExtender>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Age</span>
-                                <asp:TextBox runat="server" ID="TextBox11" Enabled="false" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Age</span>--%>
+                                <asp:TextBox runat="server" ID="TextBox11" Enabled="false" CssClass="form-control" placeholder="Age"></asp:TextBox>
                             </div>
 
                         </div>
@@ -224,26 +224,20 @@
                                 <asp:CheckBox runat="server" ID="chk8" AutoPostBack="true" OnCheckedChanged="chk8_CheckedChanged" />
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Name</span>
-                                <asp:TextBox runat="server" ID="TextBox7" Enabled="false" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Name</span>--%>
+                                <asp:TextBox runat="server" ID="TextBox7" Enabled="false" CssClass="form-control" placeholder="Name of Mother-in-law"></asp:TextBox>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Date Of Birth</span>
-                                <asp:TextBox runat="server" ID="TextBox8" Enabled="false" AutoPostBack="true" OnTextChanged="TextBox8_TextChanged" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Date Of Birth</span>--%>
+                                <asp:TextBox placeholder="Date of birth" runat="server" ID="TextBox8" Enabled="false" AutoPostBack="true" OnTextChanged="TextBox8_TextChanged" CssClass="form-control" onKeyPress="javascript: return false;" onKeyup="javascript: return false;" onPaste="javascript: return false;"></asp:TextBox>
                                 <cc1:CalendarExtender ID="CalendarExtender1_TextBox8" runat="server" BehaviorID="CalendarExtender_TextBox8" DaysModeTitleFormat="yyyy/MM/dd" Format="yyyy/MM/dd" TargetControlID="TextBox8" TodaysDateFormat="yyyy/MM/dd"></cc1:CalendarExtender>
                             </div>
                             <div class="col-md-3">
-                                <span class="text-danger">* </span><span class="text-info">Age</span>
-                                <asp:TextBox runat="server" ID="TextBox12" Enabled="false" CssClass="form-control"></asp:TextBox>
+                                <%--<span class="text-danger">* </span><span class="text-info">Age</span>--%>
+                                <asp:TextBox runat="server" ID="TextBox12" Enabled="false" CssClass="form-control" placeholder="Age"></asp:TextBox>
                             </div>
 
-                        </div>
-
-
-
-
-
-
+                        </div> 
 
                         <div class="col-md-12 mrg-t-20 ">
                             <div class="col-md-9">
@@ -294,25 +288,31 @@
 
             if (chk1.checked == true) {
                 if (ChildName1 == "") {
-                    alert("Enter Child 1 name ");
+                    alert("Enter Name of the 1st Child.");
+                    $("#txtChildName1").focus();
                     return false;
                 } else if (DOB1 == "") {
-                    alert("Enter Child 1 Date of Birth ");
+                    alert("Select DOB of the 1st Child. ");
+                    $("#txtDOB1").focus();
                     return false;
                 } else if (Relation1 == "0") {
-                    alert("Enter Child 1 Relation");
+                    alert("Select the relation of the child.");
+                    $("#ddlRelation1").focus();
                     return false;
                 }
             }
             if (chk2.checked == true) {
                 if (ChildName2 == "") {
-                    alert("Enter Child 2 name ");
+                    alert("Enter Name of the 2nd Child.");
+                    $("#txtChildName2").focus();
                     return false;
                 } else if (DOB2 == "") {
-                    alert("Enter Child 2 Date of Birth ");
+                    alert("Select DOB of the 2nd Child. ");
+                    $("#txtDOB2").focus();
                     return false;
                 } else if (Relation2 == "0") {
-                    alert("Enter Child 2 Relation");
+                    alert("Select the relation of the child.");
+                    $("#ddlRelation2").focus();
                     return false;
                 }
             }
@@ -326,13 +326,16 @@
             }
             if (chk3.checked == true) {
                 if (ChildName3 == "") {
-                    alert("Enter Child 3 name ");
+                    alert("Enter Name of the 3rd Child.");
+                    $("#txtChildName3").focus();
                     return false;
                 } else if (DOB3 == "") {
-                    alert("Enter Child 3 Date of Birth ");
+                    alert("Select DOB of the 3rd Child. ");
+                    $("#txtDOB3").focus();
                     return false;
                 } else if (Relation3 == "0") {
-                    alert("Enter Child 3 Relation");
+                    alert("Select the relation of the child.");
+                    $("#ddlRelation3").focus();
                     return false;
                 }
             }
@@ -341,10 +344,12 @@
                     alert("Enter Child 4 name ");
                     return false;
                 } else if (DOB4 == "") {
-                    alert("Enter Child 4 Date of Birth ");
+                    alert("Select DOB of the 4th Child. ");
+                    $("#txtDOB4").focus();
                     return false;
                 } else if (Relation4 == "0") {
-                    alert("Enter Child 4 Relation");
+                    alert("Select the relation of the child.");
+                    $("#ddlRelation4").focus();
                     return false;
                 }
             }
@@ -360,11 +365,11 @@
                 alert("Age Cannot be blank");
                 return false;
             } else if (chk1.checked == false) {
-                alert("select atlease 1 child");
+                alert("select atleast 1 child");
                 return false;
             }
             else {
-                alert("okey");
+                alert("Data submitted successfully.");
             }
 
 

@@ -18,16 +18,22 @@ public partial class userdetails : System.Web.UI.Page
         {
             // bindDept();
             //bindTax();
+            //Calendar1.Visible = false;
+            CalendarExtender_txtUserDOB.EndDate = DateTime.Now;
+            CalendarExtender1_txtDOJ.EndDate = DateTime.Now;
             BindXmlDepartment(); BindXmlTax();
         }
     }
 
     protected void txtUserDOB_TextChanged(object sender, EventArgs e)
     {
-        DateTime dob = Convert.ToDateTime(txtUserDOB.Text);
-        TimeSpan tm = (DateTime.Now - dob);
-        int age = (tm.Days / 365);
-        txtAge.Text = Convert.ToString(age);
+        if (txtUserDOB.Text != "")
+        {
+            DateTime dob = Convert.ToDateTime(txtUserDOB.Text);
+            TimeSpan tm = (DateTime.Now - dob);
+            int age = (tm.Days / 365);
+            txtAge.Text = Convert.ToString(age);
+        }
 
     }
 
@@ -175,5 +181,5 @@ public partial class userdetails : System.Web.UI.Page
                 }
             }
         }
-    }
+    } 
 }

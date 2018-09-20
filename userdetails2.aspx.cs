@@ -250,7 +250,7 @@ public partial class userdetails2 : System.Web.UI.Page
 
     protected void chk8_CheckedChanged(object sender, EventArgs e)
     {
-        if (chk7.Checked == true)
+        if (chk8.Checked == true)
         {
             TextBox7.Enabled = true;
             TextBox8.Enabled = true;
